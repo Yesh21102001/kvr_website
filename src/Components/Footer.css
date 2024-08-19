@@ -1,0 +1,157 @@
+.divider {
+  border: none;
+  height: 5px;
+  background-color: white;
+  margin-top: 20px; 
+}
+
+/* .name {
+  display: flex;
+  justify-content: row;
+} */
+
+.footer {
+  background-color: #C46E20;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  font-family: 'Reddit Sans Condensed', sans-serif;
+}
+
+.footer .divider {
+  border-color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-section {
+  margin: 10px;
+}
+
+.footer-logo {
+  height: 200px;
+}
+
+.footer h3,
+.footer h5,
+.footer p {
+  color: black;
+  font-weight: 700;
+}
+
+.footer p,
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links div {
+  cursor: pointer;
+  color: white;
+  font-family: 'Reddit Sans Condensed', sans-serif;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    height: 150px;
+  }
+  .footer-links div {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    height: 100px;
+  }
+  .footer-links div {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-logo {
+    height: 80px;
+  }
+  .footer h3,
+  .footer h5,
+  .footer p {
+    font-size: 14px;
+  }
+  .footer-links div {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-logo {
+    height: 70px;
+  }
+  .footer h3,
+  .footer h5,
+  .footer p {
+    font-size: 12px;
+  }
+  .footer-links div {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-logo {
+    height: 60px;
+  }
+  .footer h3,
+  .footer h5,
+  .footer p {
+    font-size: 10px;
+  }
+  .footer-links div {
+    font-size: 10px;
+  }
+  .footer-bottom p {
+    font-size: 10px;
+  }
+  .footer-social img {
+    height: 25px;
+    width: 25px;
+    margin: 3px;
+  }
+}

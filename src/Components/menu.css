@@ -1,0 +1,200 @@
+.gallery-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 60vh; 
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.heading {
+  font-family: "Pacifico, cursive";
+  font-size: 6vw;
+  color: #fff;
+  animation: slideInFromTop 2s ease-out forwards;
+}
+
+.menu-section {
+  padding: 50px;
+}
+
+.menu-heading {
+  font-family: "Reddit Sans Condensed, sans-serif";
+  font-weight: 800;
+  color: #e75814;
+}
+
+.slick-prev,
+.slick-next {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 20px;
+  color: black;
+}
+
+.slick-prev {
+  left: 40px; /* Adjust the position as needed */
+}
+
+.slick-next {
+  right: 20px; /* Adjust the position as needed */
+}
+
+.slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-image {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slick-center .slider-image {
+  transform: scale(1.0); /* Zoom in the center slide */
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 40vh; /* Adjust for smaller screens */
+  }
+
+  .heading {
+    font-size: 8vw;
+  }
+
+  .menu-section {
+    padding: 10px;
+  }
+
+  .slider-image {
+    max-height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-center .slider-image {
+    transform: scale(1.05); 
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 30vh; 
+  }
+
+  .heading {
+    font-size: 10vw;
+    margin-left: -30px;
+  }
+
+  .menu-heading {
+    margin-left: 90px;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .slider-image {
+    max-width: 700px; /* Increased max height */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-right: 20px;
+  }
+
+  .slick-center .slider-image {
+    transform: scale(1.1); /* Further zoom for the center slide */
+    margin-left: 80px;
+  }
+
+  .slick-prev {
+    left: 40px; 
+  }
+  
+  .slick-next {
+    right: -10px; 
+  }
+}
+
+
+@media (max-width: 320px) {
+  .banner {
+    height: 25vh; 
+  }
+  .heading {
+    font-size: 14vw; 
+    margin-right: 50px;
+  }
+  .slider-image {
+    max-height: 300px; /* Adjust for smaller screens */
+  }
+
+  .slick-center .slider-image {
+    transform: scale(1.05); 
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner {
+    height: 28vh; /* Adjust height for screens around 375px */
+  }
+  .heading {
+    font-size: 13vw; /* Adjust font size for screens around 375px */
+  }
+  .slider-image {
+    max-height: 300px; 
+  }
+
+  .slick-center .slider-image {
+    transform: scale(1.05); /* Adjust zoom for smaller screens */
+  }
+}
+
+@media (max-width: 390px) {
+  .banner {
+    height: 30vh;
+  }
+
+  .heading {
+    font-size: 12vw;
+  }
+
+  .slider-image {
+    max-height: 200px;
+  }
+
+  .slick-center .slider-image {
+    transform: scale(1.05); 
+  }
+
+  .menu-section {
+    padding: 5px;
+  }
+}

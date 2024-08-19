@@ -1,0 +1,350 @@
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between cards */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.text {
+  font-size: 18px;
+  font-family: "Reddit Sans Condensed", sans-serif;
+}
+
+.paragraph {
+  width: 100%; 
+  margin: 0 auto;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.category-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 1.2em;
+  font-family: "Reddit Sans Condensed", sans-serif;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card:hover .category-image {
+  filter: brightness(80%) blur(2px);
+}
+
+.category-card:hover .category-title {
+  opacity: 2;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Reddit Sans Condensed", sans-serif;
+}
+
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar .container-fluid {
+  height: 80px;
+  margin-top: 0px;
+  backdrop-filter: blur(10px);
+}
+
+.About {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.About .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.About .col-6 {
+  flex: 1;
+  padding: 15px;
+}
+
+.About .col-5 img {
+  max-width: 90%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.About .col-7 h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif; 
+}
+
+.About .col-7 p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  font-family: "Roboto", sans-serif; 
+}
+
+.Categories {
+  font-size: 20px;
+  color: white;
+  padding-top: 20px;
+  font-weight: 800;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.Main {
+  background-image: url('../assets/cate-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 10;
+}
+
+.contact {
+  background-color: #fff;
+  margin: 0;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.col-4 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;/* Contact details section */
+.contact-details {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.contact-hover {
+  transition: transform 0.5s ease-in-out;
+}
+
+.contact-hover:hover .contact-info {
+  transform: translateY(-20px);
+}
+
+.contact-info {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Contact section */
+.contact {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.contact-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.contact-title {
+  font-size: 1.5em;
+  color: #e75814;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #e75814;
+}
+
+.contact-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+}
+
+p:hover .img-hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+p:hover .img-hover1 {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  flex: 1;
+  margin: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  display: block;
+  font-family: "Reddit Sans Condensed", sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  background-color: #203c25;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #203c25;
+}
+
+.navigations {
+  margin-left: 150px;
+  font-size: 20px;
+  color: #ff204e;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.row {
+  margin: 20px;
+}
+
+.col-6 {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Define animation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(3);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to headings */
+.slide-in-from-left {
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+.slide-in-from-right {
+  animation: slideInFromRight 1s ease forwards;
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(3);
+    opacity: 1;
+  }
+}
+
+.slide-in-from-bottom {
+  animation: slide-in-from-bottom 0.5s ease-out forwards;
+}

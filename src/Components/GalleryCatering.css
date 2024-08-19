@@ -1,0 +1,153 @@
+.gallery-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+/* 
+.image-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  
+  transition: transform 0.3s ease-in-out; 
+} */
+
+.image-grid img:hover {
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+.image-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
+  opacity: 0; /* Initially hide images */
+}
+
+.image-grid img.slide-in {
+  animation: slideInFromBottom 0.2s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.heading {
+  animation: slideInFromTop 2s ease-out forwards;
+  font-family: "Pacifico", cursive;
+  font-size: "100px";
+  color: "#FFF";
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 465px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    top: 40%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    top: 35%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    top: 30%;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+  }
+
+  .banner {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    top: 25%;
+    font-size: 0.8rem;
+  }
+}
